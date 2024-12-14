@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Task, TaskUpdate } from './useTasks.types'
 
-
-
-
+/**
+ * Custom hook for managing tasks
+ * Handles fetching, storing, and updating tasks
+ */
 export const useTasks = () => {
   const [tasks, setTasks] = useState<Task[]>([])
   const [loading, setLoading] = useState(true)
