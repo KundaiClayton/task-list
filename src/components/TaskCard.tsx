@@ -1,4 +1,4 @@
-import { Card, CardContent, IconButton, Typography, Box, useTheme, alpha } from '@mui/material'
+import { Card, CardContent, IconButton, Typography,useTheme, alpha } from '@mui/material'
 import TaskAltIcon from '@mui/icons-material/TaskAlt'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import { Task } from '@/hooks/useTasks.types'
