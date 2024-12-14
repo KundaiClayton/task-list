@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Task List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive single-page application built with React, Material UI, and TanStack Router that manages and displays task items.
 
-Currently, two official plugins are available:
+## Technical Decisions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React + TypeScript**: Type safety and improved developer experience
+- **TanStack Router**: Type-safe routing with excellent DX and performance
+- **Material UI**: Production-ready components with consistent design language
+- **Vite**: Modern build tool offering superior DX and build performance
 
-## Expanding the ESLint configuration
+## Architecture Decisions Records (ADRs)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+See [doc/architecture/decisions](doc/architecture/decisions) for detailed technical decisions and their rationales.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# Install dependencies
+yarn install
+
+# Run development server
+yarn dev
+
+
+# Build for production
+yarn build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+src/
+├── components/     # Reusable UI components
+├── hooks/         # Custom React hooks
+├── routes/        # TanStack Router routes
+├── theme/         # MUI theme configuration
+```
+
+## Development Guidelines
+
+- Follow conventional commits for version control
+- Components should be focused and reusable
+
